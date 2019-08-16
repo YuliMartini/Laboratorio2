@@ -9,7 +9,7 @@ public class MediaPosicionesPares {
     Los números se almacenarán en un array y el programa calculará la media de los números 
     introducidos en las posiciones pares del array. (Debes utilizar el operador módulo “%”).*/
 
-	public static void main(String[] args) {
+	public static void main(String[] args){
 		// TODO Auto-generated method stub
 		int enteros[]= new int[10];
 		int pares = 0;

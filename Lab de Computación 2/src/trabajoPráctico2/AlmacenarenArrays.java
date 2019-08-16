@@ -9,7 +9,7 @@ Desarrollar un programa que pida al usuario que introduzca 10 números enteros po
 Los números introducidos se almacenarán en un array. 
 El programa imprime en consola cuántos números negativos, positivos y valores 0 hay en el array.*/
 
-	public static void main(String[] args) {
+	public static void main(String[] args){
 				
 		int enteros[] = new int [10];
 		int positivos = 0; 
