@@ -1,7 +1,7 @@
-package trabajoPr√°ctico1;
-//Deben realizar un programa que pida al usuario el nombre y su edad, y le informe si es mayor de 18 a√±os o menor
+package trabajoPr·ctico1;
+//Deben realizar un programa que pida al usuario el nombre y su edad, y le informe si es mayor de 18 aÒos o menor
 //con un mensaje por consola que diga: "Fulanito es mayor de edad" o "Fulanito es menor de edad"
-//√âsta operaci√≥n se repetir√° indefinidamente hasta que el usuario ingrese el n√∫mero 0 en edad.
+//Esta operaciÛn se repetir· indefinidamente hasta que el usuario ingrese el n˙mero 0 en edad.
 
 import javax.swing.*;
 
