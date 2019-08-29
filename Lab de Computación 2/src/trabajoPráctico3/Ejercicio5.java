@@ -13,8 +13,8 @@ public class Ejercicio5 {
 	       
 		System.out.println("EJERCICIO N° 5\n");
 		
-		//después de ser inicializada, se pide al usuario que ingrese los datos para rellenar la matriz
-		//y simulatáneamente se carga un arreglo de una dimensión
+		//después de ser inicializada, se carga la matriz con la función "random"
+		//y simulatáneamente también un arreglo de una dimensión
 		System.out.println("Por favor, ingrese los elementos: \n");
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {

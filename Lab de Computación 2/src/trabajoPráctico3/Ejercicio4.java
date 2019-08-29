@@ -14,7 +14,7 @@ public class Ejercicio4 {
 	       
 		System.out.println("EJERCICIO N° 4\n");
 		//después de ser inicializada, se carga la matriz con la función "random"
-		//y simulatáneamente un arreglo de una dimensión
+		//y simulatáneamente también un arreglo de una dimensión
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
 				matriz[i][j] = (int) (Math.random() * 50);
@@ -29,7 +29,7 @@ public class Ejercicio4 {
 			for (int elemento : fila) {
 				System.out.print(elemento + "\t");
 			}
-			System.out.println("");
+			System.out.println("");	            
 		}
 		
 		//Se ordena el arreglo

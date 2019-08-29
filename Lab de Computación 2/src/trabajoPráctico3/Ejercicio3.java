@@ -22,7 +22,6 @@ public class Ejercicio3 {
 		
 		System.out.println("EJERCICIO N° 3\n");
 		
-		//se piden los datos al usuario a través de la consola y se los carga en la matriz
 		for(int fila = 0; fila < 3; fila++) {
 			System.out.println("NOMBRE: ");
 			datos[fila][0]=input.next();
@@ -33,28 +32,18 @@ public class Ejercicio3 {
 		}		
 		input.close();
 		
-		//se muestra el arreglo original por consola
-		System.out.println("---------------------------------");        
-		System.out.println("Arreglo original:\n");
-		System.out.println("---------------------------------");
-		for(String fila[]:datos) {
-			System.out.println("NOMBRE: "+fila[0]);
-			System.out.println("DNI: "+fila[1]);
-			System.out.println("EDAD: "+fila[2]);
-			System.out.println("---------------------------------");				
-		}
-	        
-		//se ordena la matriz alfabéticamente
 		Arrays.sort(datos, new Comparator<String[]>() {
 			@Override
+	        //arguments to this method represent the arrays to be sorted   
 			public int compare(String[] e1, String[] e2) {
+				//get the item ids which are at index 0 of the array
 				String item1 = e1[0];
 				String item2 = e2[0];
+				// sort on item id
 				return item1.compareTo(item2);
 			}
 		});
-		
-		//se muestra el arreglo ordenado
+        System.out.println("---------------------------------");        
         System.out.println("Arreglo ordenado alfabéticamente:\n");
         System.out.println("---------------------------------");
         for(String fila[]:datos) {
