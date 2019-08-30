@@ -1,6 +1,7 @@
 package trabajoPráctico4;
 
 import java.util.Random;
+
 import java.util.Scanner;
 
 /*Crea una clase capaz de crear cuentas corrientes bancarias con las siguientes características:
@@ -31,64 +32,39 @@ public class CuentaCorriente {
 
     public CuentaCorriente(String nombre, double saldo) {
         
-    	Random rand = new Random();    	  
-         
+    	Random rand = new Random();        
     	long nroCuenta = rand.nextInt(1000);                
     	this.nombre = nombre;
         this.nroCuenta = nroCuenta;
         this.saldo = saldo;
-    }
-        
-
-    public long getNroCuenta() {
-		return this.nroCuenta;
-	}
+    }        
 
 	public void getInfo() {    	
-    	System.out.println("Nombre de la cuenta: " + nombre +
-    			         "\nNúmero de la cuenta: " + nroCuenta);    	
+    	System.out.println("\nNombre de la cuenta: " + nombre +
+    		  "\nNúmero de la cuenta: " + nroCuenta +
+    		  "\nSaldo disponible: $" + saldo);
     }
     
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
-    }
-
     public double getSaldo() {
         return this.saldo;
     }
 
-    public void acreditar(double valor){
+    public void ingresar(double valor){
+        this.saldo += valor;
+    }
+    
+    public void reintegro(double valor){
         this.saldo += valor;
     }
 
     public void debitar(double valor){
-        if (valor > saldo){
-            System.out.println("No es posible realizar la operación. El monto a debitar supera el saldo de la cuenta.");
-        }else{
-            this.saldo -= valor;
-        }
+    	this.saldo -= valor;    
     }
-
-    public static void cargarCuentas(CuentaCorriente[] cuentas) {
-		Scanner input = new Scanner(System.in);
-		for(int i = 0; i < cuentas.length; i++) {
-			System.out.print("\nNombre: ");
-			String nombre = input.next();
-			System.out.print("\nSaldo inicial: ");
-			double saldo = input.nextDouble();
-			System.out.println("\n----------\n");
-			CuentaCorriente cuenta = new CuentaCorriente(nombre, saldo);
-			cuentas[i] = cuenta;
-		}
-		//input.close();
-		
+    
+    public static void transferencia(CuentaCorriente origen, CuentaCorriente destino, double valor) {
+		origen.debitar(valor);
+		destino.ingresar(valor);
+		System.out.println("\nTransferencia realizada por un monto de $"+ valor);
 	}
     
-    public static void listarCuentas(CuentaCorriente[] cuentas) {
-		for(CuentaCorriente cuenta:cuentas) {
-			System.out.println("Nombre: "+cuenta.nombre);
-			System.out.println("Saldo: "+cuenta.saldo);
-			System.out.println("Número de Cuenta: "+cuenta.nroCuenta);		
-			}
-		}
 }
