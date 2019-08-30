@@ -2,8 +2,6 @@ package trabajoPráctico4;
 
 import java.util.Random;
 
-import java.util.Scanner;
-
 /*Crea una clase capaz de crear cuentas corrientes bancarias con las siguientes características:
   * Nombre de clase: CuentaCorriente.
   * Propiedades:
